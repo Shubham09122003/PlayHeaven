@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../scripts/game-info/game-info-scripts.js"></script>
+  <script src="../scripts/general-scripts/sessionChecks.js" defer></script>
+  <script src="../scripts/general-scripts/logoutUser.js" defer></script>
+  <link rel="stylesheet" href="../../styles/general-styles.css">
+  <link rel="shortcut icon" href="../../assets/images/icons/playHeaven.png" type="image/x-icon">
+  <title>PlayHeaven</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark py-0">
+      <div class="container-fluid">
+        <div class="d-flex border-end py-3">
+          <img src="../../assets/images/icons/playHeaven.png" alt="page-logo" width="45" height=""
+            class="d-inline-block align-text-top">
+          <a class="navbar-brand fs-3 pe-2" href="/index.html">PlayHeaven</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ps-2" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-3 me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Start</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/about-us.html">Us</a></li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <div id="admin-item">
+              <li class="nav-item"><a class="nav-link text-success" href="../pages/admin/admin-panel.html">Admin</a>
+              </li>
+            </div>
+            <div id="logout-item">
+              <li class="nav-item"><a href="../index.html" id="logout-link" class="nav-link text-danger">Go out</a></li>
+            </div>
+            <div id="login-item">
+              <li class="nav-item"><a class="nav-link" href="../pages/login-register.html">Get into</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- COVER WITH TITLE AND BRIEF DESCRIPTION -->
+    <section class="game-front-container container-fluid px-0">
+      <div class="col-md-12 card border-0">
+        <img id="cover-image" alt="game info front image" class="card-img">
+        <div class="container-fluid card-img-overlay caption-back row gx-0 pb-0 pb-md-3">
+          <div class="col-10 col-md-8 ps-lg-4 mb-md-1 d-flex flex-column justify-content-end">
+            <h2 id="name-tag" class="display-5"></h2>
+            <div class="d-flex">
+              <div id="category-badge" class="me-2">
+              </div>
+              <div id="platform-badge">
+              </div>
+            </div>
+            <p id="description-tag" class="lead my-2 d-none d-lg-block"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="game-info-container container mb-4 mt-md-4">
+      <div class="game-info-block general-container row px-4 pt-4">
+        <div class="col-12 col-lg-9 game-info-content pe-lg-4">
+          <!-- VIDEO CONTAINER -->
+          <div class="video-container mb-4">
+            <iframe id="video-url" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <!--DESCRption TEXT -->
+          <article class="generic-text-info mb-3">
+            <h3>Aim</h3>
+            <p>In outer space there are still no fights, no prejudices, no national conflicts. Its dangers are
+              hostile to all of us. Its conquest deserves the best of all humanity, and its opportunity for
+              peaceful cooperation many will not appear again.</p>
+            <p>But why, some say, the Moon? Why choose it as a goal? And you may well ask why
+              climb the highest mountain? Why, 35 years ago, fly the Atlantic? Why play Rice in Texas?
+            </p>
+          </article>
+          <!-- GENERIC CHARACTERISTICS -->
+          <article class="game-characteristics">
+            <h3>Characteristics</h3>
+            <ul>
+              <li>Spaceflight will never tolerate carelessness, inability and negligence. Somewhere, from
+                Somehow, we have screwed it up. It could have been in design, construction or testing.</li>
+              <li>Whatever it is, we should have caught it. We were too excited about the schedule and
+                we blocked all the problems we saw every day in our work.</li>
+              <li>Earth is the only world known so far to harbor life. There is nowhere else, at least
+                in the near future, to which our species can emigrate. Visit, yes. Settle down, not yet. Us
+                Like it or not, for the moment the Earth is the place where we settle.</li>
+              <li>For these reasons, I believe that the decision made last year to change our efforts in the
+                space from low to high speed is one of the most important decisions that will be made during my
+                mandate in the Presidency.</li>
+            </ul>
+          </article>
+          <!-- CAROUSEL -->
+          <section id="gameImagesCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id="carousel-image-1" class="d-block w-100" alt="carousel game image 1">
+              </div>
+              <div class="carousel-item">
+                <img id="carousel-image-2" class="d-block w-100" alt="carousel game image 2">
+              </div>
+              <div class="carousel-item">
+                <img id="carousel-image-3" class="d-block w-100" alt="carousel game image 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#gameImagesCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Former</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#gameImagesCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Following</span>
+            </button>
+          </section>
+        </div>
+        <!-- TECHNICAL INFORMATION-->
+        <aside class="col-12 col-lg-3 game-info-features mb-3 ps-lg-3 py-4">
+          <div class="buttons-container d-flex justify-content-around">
+            <a href="./404error.html" id="price-tag" class="btn btn-lg btn-success mb-4">Buy - 200₹</a>
+            <a href="./404error.html" class="btn btn-lg btn-primary mb-4"><i class="bi bi-file-plus-fill"></i></a>
+          </div>
+          <!-- GENERAL INFORMATION -->
+          <div class="general-information pt-4 border-top">
+            <h3 class="pb-3">General information:</h3>
+            <ul class="list-unstyled mb-4">
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold"><i class="bi bi-controller"></i> Platform</h4>
+                <p id="platform-tag" class="fs-6">&gt</p>
+              </li>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold"><i class="bi bi-dice-6"></i> Category</h4>
+                <p id="category-tag" class="fs-6">&gt </p>
+              </li>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold"><i class="bi bi-building"></i> Developer</h4>
+                <p id="dev-tag" class="fs-6">&gt </p>
+              </li>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold"><i class="bi bi-calendar"></i> Year</h4>
+                <p id="year-tag" class="fs-6">&gt </p>
+              </li>
+            </ul>
+          </div>
+          <!-- LIST OF REQUIREMENTS -->
+          <div class="game-requeriments pt-4 border-top">
+            <ul class="list-unstyled">
+              <h3 class="pb-3">System requirements:</h3>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold">OS</h4>
+                <p class="fs-6"><i class="bi bi-windows pe-2"></i>&gt Windows 7 / Vista / XP (or higher)</p>
+              </li>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold">Processor</h4>
+                <p class="fs-6"><i class="bi bi-cpu pe-2"></i>&gt 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or
+                  superior)</p>
+              </li>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold">MeGraphicsmory</h4>
+                <p class="fs-6"><i class="bi bi-memory pe-2"></i>&gt 2 GB RAM</p>
+              </li>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold">Graficos</h4>
+                <p class="fs-6"><i class="bi bi-gpu-card pe-2"></i>&gt The video card must be 128 MB or larger and be
+                  compatible with Pixel Shader 2.0b (ATI Radeon X800 or higher / Intel HD Graphics 2000 or higher).</p>
+              </li>
+              <li class="pb-3">
+                <h4 class="fs-6 text-uppercase fw-bold">Storage</h4>
+                <p class="fs-6"><i class="bi bi-hdd pe-2"></i>&gt 8 GB of available space</p>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <!-- OTHER GAMES -->
+    <section class="similar-games-container general-container container mb-md-4">
+      <div class="row d-flex justify-content-around my-4">
+        <div class="col-12">
+          <h2 class="pb-3 px-4">Maybe you're interested:</h2>
+        </div>
+        <div class="col-10 col-lg-3 card game-card px-0 mx-0 mb-3">
+          <img src="/assets/images/games-store-main/game-3-puzzle.jpg" class="card-img-top" alt="game card image">
+          <div class="card-body">
+            <div class="d-flex justify-content-between flex-row flex-lg-column flex-xl-row">
+              <h3 class="card-title fs-5">Q.U.B.E. 2</h3>
+              <p class="badge bg-warning text-black"><i class="bi bi-puzzle pe-2 text-black"></i>Puzzle</p>
+            </div>
+            <p class="card-text">A stranded archaeologist has awakened among the ruins of an ancient alien landscape.
+              With the distant help of another survivor, you must manipulate the structure of this mysterious world and
+              find your way back home.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <p class="badge bg-dark mb-0"><i class="bi bi-pc-display pe-2"></i>PC</p>
+            <a href="../pages/404error.html" class="btn btn-success float-end"><i
+                class="bi bi-arrow-right-circle-fill me-md-2"></i>See more</a>
+          </div>
+        </div>
+        <div class="col-10 col-lg-4 col-xl-3 card game-card px-0 mx-0 mb-3">
+          <img src="/assets/images/games-store-main/game-2-strategy.jpg" class="card-img-top" alt="game card image">
+          <div class="card-body">
+            <div class="d-flex justify-content-between flex-row flex-lg-column flex-xl-row">
+              <h3 class="card-title fs-5">Warhammer</h3>
+              <p class="badge bg-info text-black"><i class="bi bi-pie-chart pe-2 text-black"></i>Strategy</p>
+            </div>
+            <p class="card-text">A cataclysm is approaching. Gather your forces and enter the Realm of Chaos, a dimension
+              of mind-blowing horror where the fate of the world will be decided. Will you conquer your Daemons or command them?
+            </p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <p class="badge bg-dark mb-0"><i class="bi bi-pc-display pe-2"></i>PC</p>
+            <a href="../pages/404error.html" class="btn btn-success float-end"><i
+                class="bi bi-arrow-right-circle-fill me-md-2"></i>See more</a>
+          </div>
+        </div>
+        <div class="col-10 col-lg-3 card game-card px-0 mx-0 mb-3">
+          <img src="/assets/images/games-store-main/game-3-shooter.jpg" class="card-img-top" alt="game card image">
+          <div class="card-body">
+            <div class="d-flex justify-content-between flex-row flex-lg-column flex-xl-row">
+              <h5 class="card-title">Rainbow Six Siege</h5>
+              <p class="badge bg-danger"><i class="bi bi-bullseye pe-2"></i>Shots</p>
+            </div>
+            <p class="card-text">Inspired by the reality of anti-terrorist operations, it invites you to master the art
+              of destruction. Intense confrontations, team tactics, and explosive action are the
+              center of experience.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <p class="badge bg-dark mb-0"><i class="bi bi-xbox pe-2"></i>XBOX</p>
+            <a href="../pages/404error.html" class="btn btn-success float-end"><i
+                class="bi bi-arrow-right-circle-fill me-md-2"></i>See more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="container-fluid d-flex  justify-content-between align-items-center py-3">
+    <div class="col-md-3 ms-3 d-flex align-items-center">
+      <p class="mb-0 fs-5 text-white d-flex flex-column flex-sm-row"><span class="pe-2">© 2023</span> <span>PlayHeaven</span></p>
+    </div>
+    <div class="col-md-3 d-flex align-items-center justify-content-center mb-md-0 ">
+      <a href="../../index.html" class="link-dark text-decoration-none"><img
+          src="../../assets/images/icons/playHeaven.png" alt="page logo" width="100"></a>
+    </div>
+    <div class="nav col-md-3 me-3 justify-content-end">
+      <ul class="d-flex flex-row mb-0 list-unstyled">
+        <li class="ms-3"><i class="bi bi-github text-white fs-3"></i></li>
+        <li class="ms-3"><i class="bi bi-instagram text-white fs-3"></i></li>
+        <li class="ms-3"><i class="bi bi-facebook text-white fs-3"></i></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
